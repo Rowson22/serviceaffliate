@@ -35,7 +35,7 @@ navf{
   float: left;
   width: 30%;
   height:  1200px;
-  background: #ccc;
+-  background: #ccc;
   padding: 20px;
   margin:   0px 10px 0px 24px;
 }

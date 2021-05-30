@@ -1,3 +1,7 @@
+<?php session_start(); ?>
+<?php
+    if($_SESSION['session_username'] !='' && !empty($_SESSION['session_username'])){
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -35,7 +39,7 @@ navf{
   float: left;
   width: 30%;
   height:  1200px;
-  background: #ccc;
+-  background: #ccc;
   padding: 20px;
   margin:   0px 10px 0px 24px;
 }
@@ -98,8 +102,8 @@ footer {
     .search{
       margin: 10px 0px 0px 24px;
     }
-    .search2{
-      margin: 10px 0px 0px 64px;
+    .search{
+
     }
     .list-border {
             border-bottom: solid; 
@@ -131,15 +135,15 @@ footer {
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
-        <li ><a href="index.php">Home</a></li>
-        <li class="active"><a href="talent.php">Find Talent</a></li>
-        <li><a href="work.php">Find Work</a></li>
-        <li><a href="whywork.php">Why Work SA</a></li>
-        <li><a href="contact.php">Contact</a></li>
+        <li><a href="dashboard.php">Home</a></li>
+        <li><a href="ltalent.php">Find Talent</a></li>
+        <li class="active"><a href="lwork.php">Find Work</a></li>
+        <li><a href="lwhywork.php">Why Work SA</a></li>
+        <li><a href="lcontact.php">Contact</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="#"><span class="glyphicon glyphicon-user"></span> Login</a></li>
-        <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+        <li><a href="#"><span class="glyphicon glyphicon-user"></span><?php echo $_SESSION['session_username']; ?></a></li>
+        <li><a href="logout.php"><span class="glyphicon glyphicon-user"></span> Logout</a></li>
       </ul>
     </div>
   </div>
@@ -154,10 +158,27 @@ footer {
 <header>
   <h2>Find Talent</h2>
 </header>
+<div class="input-group">
+  <div class="search">
+        <!-- declaration for first field -->
+        <input type="text" class="form-control 
+                input-sm" size="120" placeholder="Search" />
+   </div>
+        <!-- reducong the gap between them to zero -->
+        <span class="input-group-btn" 
+            style="width:0px;"></span>
+  
+        <!-- declaration for second field -->
+        <input type="text" class="form-control 
+                input-sm" value="" size="120" placeholder="Online Job" />
 
-<div class="search">
+                <span class="input-group-btn" 
+            style="width:0px;"></span>
+            <div class="search">     <button>Search</button>
+              </div>
 
-<p><input type="text" placeholder="Search" size="90" /><input type="text" placeholder="OnlineJobs" size="90" /><button> Search </button></p>
+
+
 </div>
 
 <section>
@@ -176,56 +197,56 @@ footer {
       <h2>Content writer 6 days left</h2>
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
     
-    Standing on the River Thames, London has been a major settlement for two millennia, its history going back tans, who named it Londinium.<button>Select</button>
+    Standing on the River Thames, London has been a major settlement for two millennia, its history going back tans, who named it Londinium.<button>bid now</button>
   </p>
     </div>
     <div class="list-border">
       <h2>Resume Writing</h2>
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
     
-    Standing on the River Thames, London has been a major settlement for two millennia, its history going back tans, who named it Londinium.<button>Select</button>
+    Standing on the River Thames, London has been a major settlement for two millennia, its history going back tans, who named it Londinium.<button>bid now</button>
   </p>
     </div>
     <div class="list-border">
       <h2>Resume Help</h2>
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
     
-    Standing on the River Thames, London has been a major settlement for two millennia, its history going back tans, who named it Londinium.<button>Select</button>
+    Standing on the River Thames, London has been a major settlement for two millennia, its history going back tans, who named it Londinium.<button>bid now</button>
   </p>
     </div>
     <div class="list-border">
       <h2>Content writer 6 days left</h2>
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
     
-    Standing on the River Thames, London has been a major settlement for two millennia, its history going back tans, who named it Londinium.<button>Select</button>
+    Standing on the River Thames, London has been a major settlement for two millennia, its history going back tans, who named it Londinium.<button>bid now</button>
   </p>
     </div>
     <div class="list-border">
       <h2>Content writer 6 days left</h2>
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
     
-    Standing on the River Thames, London has been a major settlement for two millennia, its history going back tans, who named it Londinium.<button>Select</button>
+    Standing on the River Thames, London has been a major settlement for two millennia, its history going back tans, who named it Londinium.<button>bid now</button>
   </p>
     </div>
     <div class="list-border">
       <h2>Content writer 6 days left</h2>
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
     
-    Standing on the River Thames, London has been a major settlement for two millennia, its history going back tans, who named it Londinium.<button>Select</button>
+    Standing on the River Thames, London has been a major settlement for two millennia, its history going back tans, who named it Londinium.<button>bid now</button>
   </p>
     </div>
     <div class="list-border">
       <h2>Content writer 6 days left</h2>
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
     
-    Standing on the River Thames, London has been a major settlement for two millennia, its history going back tans, who named it Londinium.<button>Select</button>
+    Standing on the River Thames, London has been a major settlement for two millennia, its history going back tans, who named it Londinium.<button>bid now</button>
   </p>
     </div>
     <div class="list-border">
       <h2>Content writer 6 days left</h2>
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
     
-    Standing on the River Thames, London has been a major settlement for two millennia, its history going back tans, who named it Londinium.<button>Select</button>
+    Standing on the River Thames, London has been a major settlement for two millennia, its history going back tans, who named it Londinium.<button>bid now</button>
   </p>
     </div>
 
@@ -233,7 +254,7 @@ footer {
       <h2>Aritcle writing</h2>
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
     
-    Standing on the River Thames, London has been a major settlement for two millennia, its history going back tans, who named it Londinium.<button>Select</button>
+    Standing on the River Thames, London has been a major settlement for two millennia, its history going back tans, who named it Londinium.<button>bid now</button>
   </p>
     </div>
 
@@ -241,7 +262,7 @@ footer {
       <h2>Aritcle writing</h2>
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
     
-    Standing on the River Thames, London has been a major settlement for two millennia, its history going back tans, who named it Londinium.<button>Select</button>
+    Standing on the River Thames, London has been a major settlement for two millennia, its history going back tans, who named it Londinium.<button>bid now</button>
   </p>
     </div>
     
@@ -265,3 +286,6 @@ footer {
 
 </body>
 </html>
+<?php } else {
+    header('Location: login.php');
+} ?>
